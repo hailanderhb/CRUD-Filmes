@@ -12,3 +12,11 @@ Apartir daí criei o Pagefilmes.js em react (importando o react para poder utili
   <img align="center" alt="hailander-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
   <img align="center" alt="hailander-sql" height="32" width="42" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg">
 </div>
+
+Ah! E no banco de dados eu usei o docker version 19.03.12, build 48a66213fe
+Obtive a imagem do SQL Server express atravé do comando: "docker pull mcr.microsoft.com/mssql/server"
+Rodei o sql server com: "docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=1q2w3e4r@#$" -p 1433:1433 -d mcr.microsoft.com/mssql/server"
+E minha connection string ficou:  "DefaultConnection": "Data Source=localhost;Initial Catalog=FilmesDesafio;Integrated Security=False;User ID=sa;Password=1q2w3e4r@#$;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
+
+Por curiosidade... Foi nesse default connection que eu defini o nome do primeiro bd criado pelo dbcontext.. "FilmesDesafio" caso queiram mudar.
+
